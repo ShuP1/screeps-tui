@@ -1,6 +1,6 @@
 {
   "name": "screeps-tui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Terminal interface for the screeps bot programming game",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

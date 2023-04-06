@@ -232,6 +232,7 @@ class PastRoomState extends ARoomState {
             }
             program.write(' ')
         }
+        program.return()
         program.newline()
     }
     function drawRoom(t: Terrain, s: ARoomState) {
@@ -321,6 +322,7 @@ class PastRoomState extends ARoomState {
                 }
                 //Resource: ·
             }
+            program.return()
             program.newline()
         }
     }
@@ -341,6 +343,7 @@ class PastRoomState extends ARoomState {
                 drawRoom(t, loop.room)
             } else {
                 program.write(`Terminal too small of ${-margin} rows`)
+                program.return()
                 program.newline()
             }
             program.write(`Tick: ${loop.room.tick || '???'} ${!ok ? ' - No history' : '                    '}`)
