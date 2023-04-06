@@ -1,0 +1,26 @@
+{
+  "name": "screeps-tui",
+  "version": "1.0.0",
+  "description": "Terminal interface for the screeps bot programming game",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": "index.js",
+  "files": ["index.js", "dist/index.js", "dist/index.d.ts"],
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && ./index.js",
+    "watch": "nodemon --watch 'src/*' --delay 1 --exec npm run start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ShuP1",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/blessed": "^0.1.21",
+    "nodemon": "^2.0.22",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "screeps-api": "^1.16.0"
+  }
+}
