@@ -66,6 +66,7 @@ for (const { os, cpu } of targets) {
 }
 
 await $`mkdir -p dist/${binName}/bin`
+await $`cp README.md dist/${binName}/README.md`
 await $`cp bin/${binName} dist/${binName}/bin/${binName}`
 
 const nativePkg = {
