@@ -1,6 +1,6 @@
 {
   "name": "screeps-tui",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Terminal interface for the screeps bot programming game",
   "keywords": [
     "client",
