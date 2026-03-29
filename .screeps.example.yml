@@ -11,5 +11,4 @@ servers:
     password: Password
 configs:
   tui:
-    some: 'config'
-
+    some: "config"

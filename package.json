@@ -1,26 +1,49 @@
 {
   "name": "screeps-tui",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Terminal interface for the screeps bot programming game",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "bin": "index.js",
-  "files": ["index.js", "dist/index.js", "dist/index.d.ts"],
-  "scripts": {
-    "build": "tsc",
-    "start": "npm run build && ./index.js",
-    "watch": "nodemon --watch 'src/*' --delay 1 --exec npm run start",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "ShuP1",
+  "keywords": [
+    "client",
+    "console",
+    "maps",
+    "screeps",
+    "terminal",
+    "tui"
+  ],
   "license": "MIT",
-  "devDependencies": {
-    "@types/blessed": "^0.1.21",
-    "nodemon": "^2.0.22",
-    "typescript": "^5.0.3"
+  "author": "ShuP1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shup1/screeps-tui.git"
+  },
+  "bin": {
+    "screeps-tui": "./bin/screeps-tui"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "prepublishOnly": "bun run release.ts && exit 1",
+    "dev": "bun run --conditions=browser ./src/index.ts",
+    "lint": "oxlint --type-check --type-aware",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
+    "test": "bun --run fmt:check && bun --run lint"
   },
   "dependencies": {
-    "blessed": "^0.1.81",
-    "screeps-api": "^1.16.0"
-  }
+    "@opentui/core": "^0.1.92",
+    "@opentui/solid": "^0.1.92",
+    "cac": "^7.0.0",
+    "screeps-api": "npm:@screepts/screeps-api@^1.1.0",
+    "solid-js": "^1.9.12"
+  },
+  "devDependencies": {
+    "@tsconfig/bun": "latest",
+    "@types/bun": "latest",
+    "oxfmt": "^0.41.0",
+    "oxlint": "^1.57.0",
+    "oxlint-tsgolint": "^0.17.4"
+  },
+  "packageManager": "bun@1.3.10"
 }
