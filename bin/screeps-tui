@@ -4,8 +4,9 @@ import { spawnSync } from "child_process"
 import fs from "fs"
 import path from "path"
 import os from "os"
+import { fileURLToPath } from "url"
 
-const scriptPath = fs.realpathSync(__filename)
+const scriptPath = fs.realpathSync(fileURLToPath(import.meta.url))
 const scriptDir = path.dirname(scriptPath)
 
 const platformMap = {
