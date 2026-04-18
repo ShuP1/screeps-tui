@@ -32,17 +32,17 @@
     "test": "bun --run fmt:check && bun --run lint"
   },
   "dependencies": {
-    "@opentui/core": "^0.1.92",
-    "@opentui/solid": "^0.1.92",
+    "@opentui/core": "^0.1.100",
+    "@opentui/solid": "^0.1.100",
     "cac": "^7.0.0",
-    "screeps-api": "npm:@screepts/screeps-api@^1.1.0",
+    "screeps-api": "npm:@screepts/screeps-api@^1.1.1",
     "solid-js": "^1.9.12"
   },
   "devDependencies": {
     "@tsconfig/bun": "latest",
     "@types/bun": "latest",
     "oxfmt": "^0.41.0",
-    "oxlint": "^1.57.0",
+    "oxlint": "^1.60.0",
     "oxlint-tsgolint": "^0.17.4"
   },
   "packageManager": "bun@1.3.10"
